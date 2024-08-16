@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Empleado {
@@ -34,6 +36,9 @@ public class Empleado {
     @Column(columnDefinition = "TIMESTAMP", nullable=false)
     private String ultimaActualizacion;
 
+      @ManyToOne
+    @JoinColumn(name = "id_direccion")
+    private Direccion direccion;
     public Empleado() {
     }
 
@@ -43,6 +48,14 @@ public class Empleado {
 
     public void setId(byte id) {
         this.id = id;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 
     public String getNombre() {
