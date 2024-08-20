@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private byte id_categoria;
+    private long id_categoria;
 
     @Column(columnDefinition = "VARCHAR(25)", nullable = false)
     private String nombre;
