@@ -8,26 +8,26 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class CategoriaPelicula {
-@EmbeddedId
-pelicula_categoriapk id;
-@ManyToOne
-@JoinColumn(name = "id_pelicula", insertable = false, updatable = false)
-private Pelicula pelicula;
-@ManyToOne
-@JoinColumn(name = "id_categoria", insertable = false, updatable = false)
-private Categoria categoria;
+    @EmbeddedId
+    private PeliculaCategoriaPK id;
 
-    @Column(columnDefinition = "TIMESTAMP", nullable= false)    
-    private String ultima_actualizacion;
+    @ManyToOne
+    @JoinColumn(name = "id_pelicula", insertable = false, updatable = false)
+    private Pelicula pelicula;
 
-    public CategoriaPelicula() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
 
-    public pelicula_categoriapk getId() {
+    @Column(columnDefinition = "TIMESTAMP", nullable = false)
+    private String ultima_actualizacion; // Changed to LocalDateTime
+
+    // Getters and setters
+    public PeliculaCategoriaPK getId() {
         return id;
     }
 
-    public void setId(pelicula_categoriapk id) {
+    public void setId(PeliculaCategoriaPK id) {
         this.id = id;
     }
 
@@ -54,6 +54,4 @@ private Categoria categoria;
     public void setUltima_actualizacion(String ultima_actualizacion) {
         this.ultima_actualizacion = ultima_actualizacion;
     }
-
-    
 }
