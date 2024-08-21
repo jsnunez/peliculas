@@ -3,6 +3,7 @@ package com.jsnunez.peliculas.domain.entities;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -38,13 +39,15 @@ public class Cliente {
     @Column(columnDefinition = "TINYINT(1)", nullable = false)
     private Integer activo;
 
-    @Column(columnDefinition = "DATETIME", nullable = false)
-    private LocalDateTime fecha_creacion;
+    // @Column(columnDefinition = "DATETIME", nullable = false)
+    // private LocalDateTime fecha_creacion;
 
 
-    @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDateTime ultima_actualizacion;
+    // @Column(columnDefinition = "TIMESTAMP", nullable = false)
+    // private LocalDateTime ultima_actualizacion;
 
+@Embedded
+Audit audit=new Audit();
 
     public Long getId_cliente() {
         return id_cliente;
@@ -116,22 +119,32 @@ public class Cliente {
     }
 
 
-    public LocalDateTime getFecha_creacion() {
-        return fecha_creacion;
+    // public LocalDateTime getFecha_creacion() {
+    //     return fecha_creacion;
+    // }
+
+
+    // public void setFecha_creacion(LocalDateTime fecha_creacion) {
+    //     this.fecha_creacion = fecha_creacion;
+    // }
+
+
+    public Audit getAudit() {
+        return audit;
     }
 
 
-    public void setFecha_creacion(LocalDateTime fecha_creacion) {
-        this.fecha_creacion = fecha_creacion;
+    public void setAudit(Audit audit) {
+        this.audit = audit;
     }
 
 
-    public LocalDateTime getUltima_actualizacion() {
-        return ultima_actualizacion;
-    }
+    // public LocalDateTime getUltima_actualizacion() {
+    //     return ultima_actualizacion;
+    // }
 
 
-    public void setUltima_actualizacion(LocalDateTime ultima_actualizacion) {
-        this.ultima_actualizacion = ultima_actualizacion;
-    }
+    // public void setUltima_actualizacion(LocalDateTime ultima_actualizacion) {
+    //     this.ultima_actualizacion = ultima_actualizacion;
+    // }
 }
