@@ -13,7 +13,7 @@ import jakarta.persistence.ManyToOne;
 public class Almacen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private byte id;
+    private Byte id;
 
     @ManyToOne
     @JoinColumn(name="id_empleado_jefe")
