@@ -12,7 +12,7 @@ public class Pais {
     @Id
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private short id_pais;
+    private Long id_pais;
     
     @Column(columnDefinition = "VARCHAR(50)", nullable= false)
     private String nombre;
@@ -20,10 +20,10 @@ public class Pais {
     private String ultima_actualizacion;
     public Pais() {
     }
-    public short getId_pais() {
+    public Long getId_pais() {
         return id_pais;
     }
-    public void setId_pais(short id_pais) {
+    public void setId_pais(Long id_pais) {
         this.id_pais = id_pais;
     }
     public String getNombre() {

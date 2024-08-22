@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 public class Direccion {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private short id_direccion;
+private Long id_direccion;
      @Column(columnDefinition = "VARCHAR(50)", nullable= false)
     private String direccion;
     
@@ -39,11 +39,11 @@ private short id_direccion;
     public Direccion() {
     }
 
-    public short getId_direccion() {
+    public Long getId_direccion() {
         return id_direccion;
     }
 
-    public void setId_direccion(short id_direccion) {
+    public void setId_direccion(Long id_direccion) {
         this.id_direccion = id_direccion;
     }
 

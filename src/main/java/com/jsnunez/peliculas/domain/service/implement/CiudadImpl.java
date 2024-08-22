@@ -23,7 +23,7 @@ public class CiudadImpl implements CiudadService {
 
     @Transactional
     @Override
-    public Optional<Ciudad> findById(Short id) {
+    public Optional<Ciudad> findById(Long id) {
         return ciudadRepository.findById(id);
     }
 

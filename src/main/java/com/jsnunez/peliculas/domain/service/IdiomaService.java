@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface IdiomaService  {
     
     List<Idioma> findAll();
-Optional<Idioma> findById(byte id);
+Optional<Idioma> findById(Long id);
 Idioma save(Idioma Idioma);
 Idioma update(Long id);
 Optional<Idioma> delete(Long id);

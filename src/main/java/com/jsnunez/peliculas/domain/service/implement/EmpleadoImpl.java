@@ -23,7 +23,7 @@ public class EmpleadoImpl implements EmpleadoService {
 
     @Transactional
     @Override
-    public Optional<Empleado> findById(byte id) {
+    public Optional<Empleado> findById(Long id) {
         return empleadoRepository.findById(id);
     }
 

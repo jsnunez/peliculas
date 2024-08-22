@@ -23,7 +23,7 @@ public class IdiomaImpl implements IdiomaService {
 
     @Transactional
     @Override
-    public Optional<Idioma> findById(byte id) {
+    public Optional<Idioma> findById(Long id) {
         return idiomaRepository.findById(id);
     }
 

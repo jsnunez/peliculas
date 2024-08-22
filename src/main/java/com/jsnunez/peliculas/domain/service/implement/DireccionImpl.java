@@ -42,7 +42,7 @@ public class DireccionImpl implements DireccionService {
     }
     @Transactional
     @Override
-    public Optional<Direccion> findById(short id) {
+    public Optional<Direccion> findById(Long id) {
         return direccionRepository.findById(id);
       }
 }

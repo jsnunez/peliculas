@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private byte id;
+    private Long id;
 
     @Column(columnDefinition="varchar(45)", nullable = false)
     private String nombre;
@@ -20,12 +20,12 @@ public class Empleado {
     @Column(columnDefinition="varchar(45)", nullable = false)
     private String apellidos;
 
-    private byte[] imagen;
+    private Long[] imagen;
 
     @Column(columnDefinition="varchar(45)", nullable = false)
     private String email;
 
-    private byte activo;
+    private Long activo;
 
     @Column(columnDefinition="varchar(16)", nullable = false)
     private String username;
@@ -42,11 +42,11 @@ public class Empleado {
     public Empleado() {
     }
 
-    public byte getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(byte id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -74,11 +74,11 @@ public class Empleado {
         this.apellidos = apellidos;
     }
 
-    public byte[] getImagen() {
+    public Long[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(Long[] imagen) {
         this.imagen = imagen;
     }
 
@@ -90,11 +90,11 @@ public class Empleado {
         this.email = email;
     }
 
-    public byte getActivo() {
+    public Long getActivo() {
         return activo;
     }
 
-    public void setActivo(byte activo) {
+    public void setActivo(Long activo) {
         this.activo = activo;
     }
 

@@ -24,7 +24,7 @@ public class Categoria {
         return id_categoria;
     }
 
-    public void setId_categoria(byte id_categoria) {
+    public void setId_categoria(Long id_categoria) {
         this.id_categoria = id_categoria;
     }
 

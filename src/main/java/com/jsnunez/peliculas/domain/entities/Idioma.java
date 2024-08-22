@@ -11,17 +11,17 @@ public class Idioma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)    
-    private byte id_idioma;
+    private Long id_idioma;
     @Column(columnDefinition = "CHAR(20)", nullable= false)
     private String nombre;
     @Column(columnDefinition = "TIMESTAMP", nullable= false)    
     private String ultima_actualizacion;
     public Idioma() {
     }
-    public byte getId_idioma() {
+    public Long getId_idioma() {
         return id_idioma;
     }
-    public void setId_idioma(byte id_idioma) {
+    public void setId_idioma(Long id_idioma) {
         this.id_idioma = id_idioma;
     }
     public String getNombre() {

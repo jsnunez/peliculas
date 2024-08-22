@@ -8,7 +8,7 @@ public interface CiudadService  {
 
     
     List<Ciudad> findAll();
-Optional<Ciudad> findById(Short id);
+Optional<Ciudad> findById(Long id);
 Ciudad save(Ciudad Ciudad);
 Ciudad update(Long id);
 Optional<Ciudad> delete(Long id);

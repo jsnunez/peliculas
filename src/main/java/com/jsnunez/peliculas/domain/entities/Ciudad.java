@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 public class Ciudad {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private short id_ciudad;
+    private Long id_ciudad;
         @Column(columnDefinition = "VARCHAR(50)", nullable= false)
     private String nombre;
     @Column(columnDefinition = "TIMESTAMP", nullable= false)    

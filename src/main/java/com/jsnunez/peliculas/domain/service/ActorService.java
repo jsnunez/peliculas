@@ -1,14 +1,17 @@
 package com.jsnunez.peliculas.domain.service;
 
 import com.jsnunez.peliculas.domain.entities.Actor;
-import java.util.List;
+
 import java.util.Optional;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface ActorService {
 
-    List<Actor> findAll();
+    Page<Actor> findAll(Pageable pageable);
 
-    Optional<Actor> findById(Short id);
+    Optional<Actor> findById(Long id);
 
     Actor save(Actor Actor);
 

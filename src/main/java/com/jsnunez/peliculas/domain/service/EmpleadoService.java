@@ -8,7 +8,7 @@ public interface EmpleadoService   {
 
     
     List<Empleado> findAll();
-Optional<Empleado> findById(byte id);
+Optional<Empleado> findById(Long id);
 Empleado save(Empleado Empleado);
 Empleado update(Long id);
 Optional<Empleado> delete(Long id);

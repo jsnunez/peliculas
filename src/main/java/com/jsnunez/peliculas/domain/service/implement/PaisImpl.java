@@ -43,7 +43,7 @@ public class PaisImpl implements PaisService {
 
     @Transactional
     @Override
-    public Optional<Pais> findById(short id) {
+    public Optional<Pais> findById(Long id) {
         return paisRepository.findById(id);
         }
 }
