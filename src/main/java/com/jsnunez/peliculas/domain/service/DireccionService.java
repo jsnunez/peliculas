@@ -8,7 +8,7 @@ public interface DireccionService   {
 
     
     List<Direccion> findAll();
-Optional<Direccion> findById(Long id);
+Optional<Direccion> findById(short id);
 Direccion save(Direccion Direccion);
 Direccion update(Long id);
 Optional<Direccion> delete(Long id);

@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.jsnunez.peliculas.domain.entities.Inventario;
 
 public interface InventarioRepository  extends
-CrudRepository<Inventario,Short> {
+CrudRepository<Inventario,Long> {
 }

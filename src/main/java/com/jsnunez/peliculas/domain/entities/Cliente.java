@@ -1,6 +1,5 @@
 package com.jsnunez.peliculas.domain.entities;
 
-import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;

@@ -6,7 +6,7 @@ import java.util.Optional;
 public interface AlquilerService  {
     
     List<Alquiler> findAll();
-Optional<Alquiler> findById(Long id);
+Optional<Alquiler> findById(Integer id);
 Alquiler save(Alquiler Alquiler);
 Alquiler update(Long id);
 Optional<Alquiler> delete(Long id);

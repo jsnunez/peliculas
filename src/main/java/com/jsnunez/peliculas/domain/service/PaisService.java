@@ -7,7 +7,7 @@ import com.jsnunez.peliculas.domain.entities.Pais;
 public interface PaisService {
     
     List<Pais> findAll();
-Optional<Pais> findById(Long id);
+Optional<Pais> findById(short id);
 Pais save(Pais Pais);
 Pais update(Long id);
 Optional<Pais> delete(Long id);

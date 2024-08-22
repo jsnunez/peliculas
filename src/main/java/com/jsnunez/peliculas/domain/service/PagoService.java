@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface PagoService  {
     
     List<Pago> findAll();
-Optional<Pago> findById(Long id);
+Optional<Pago> findById(Integer id);
 Pago save(Pago Pago);
 Pago update(Long id);
 Optional<Pago> delete(Long id);
